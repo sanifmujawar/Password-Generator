@@ -183,9 +183,13 @@ function getRandomChararacter(array) {
   return char;
 }
 
-// Function for getting a random element from an array
-function getRandom(arr) {
-
+// Function to generate password with the user input and options
+function generatePassword(passLength, charArray) {
+  let password = "";
+  for (let i = 0; i < passLength; i++) {
+    password += getRandomChararacter(charArray);
+  }
+  return password;
 }
 
 // Function to generate password with user input
