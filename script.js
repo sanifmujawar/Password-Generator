@@ -108,6 +108,19 @@ function initApp() {
   writePassword(password);
 }
 
+// Function to prompt user for password length
+function getPassLengthOptions() {
+  let passLength = 0;
+  while (isNaN(passLength) || passLength < 10 || passLength > 64) {
+    passLength = parseInt(
+      window.prompt(
+        "How many character password do you need?\nYou must choose a number between 10-64!"
+      )
+    );
+  }
+  return passLength;
+}
+
 // Function for getting a random element from an array
 function getRandom(arr) {
 
