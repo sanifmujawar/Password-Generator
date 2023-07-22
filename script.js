@@ -176,6 +176,14 @@ function generateCharArray(options) {
 }
 
 // Function for getting a random element from an array
+function getRandomChararacter(array) {
+  let randomIndex = Math.floor(Math.random() * array.length);
+  // console.log(`${randomIndex} - ${array[randomIndex]}`);
+  let char = array[randomIndex];
+  return char;
+}
+
+// Function for getting a random element from an array
 function getRandom(arr) {
 
 }
