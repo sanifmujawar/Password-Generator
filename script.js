@@ -121,6 +121,42 @@ function getPassLengthOptions() {
   return passLength;
 }
 
+// Function to confirm the user password characters options
+function getPassCharOptions() {
+  let options = { upper: false, lower: false, numeric: false, special: false };
+  while (
+    !options.upper &&
+    !options.lower &&
+    !options.numeric &&
+    !options.special
+  ) {
+    alert(
+      `You need to select at least one charcater type to generate the password:
+      1. Upper-case Letters
+      2. Lower-case Letters
+      3. Numbers
+      4. Special Characters
+      `
+    );
+    options.upper = confirm(
+      "Do you need Upper-case Letters in your password:\n" +
+        upperCasedCharacters.join("")
+    );
+    options.lower = confirm(
+      "Do you need Lower-case Letters in your password:\n" +
+        lowerCasedCharacters.join("")
+    );
+    options.numeric = confirm(
+      "Do you need Numbers in your password:\n" + numericCharacters.join("")
+    );
+    options.special = confirm(
+      "Do you need Special Characters in your password:\n" +
+        specialCharacters.join("")
+    );
+  }
+  return options;
+}
+
 // Function for getting a random element from an array
 function getRandom(arr) {
 
