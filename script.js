@@ -88,9 +88,24 @@ var upperCasedCharacters = [
   'Z'
 ];
 
-// Function to prompt user for password options
-function getPasswordOptions() {
+// Get references to the #generate element
+let generateBtn = document.querySelector("#generate");
+// Add event listener to generate button
+generateBtn.addEventListener("click", initApp);
 
+// Function that order the calls of the other functions
+function initApp() {
+  let passLength = getPassLengthOptions();
+  console.log(`Password Length: ${passLength}`);
+  let options = getPassCharOptions(passLength);
+  console.log(`User options:`);
+  console.log(options);
+  let charArray = generateCharArray(options);
+  console.log(`Characters Array based on the user options: ${charArray}`);
+  // let char = getRandomChararacter(charArray);
+  let password = generatePassword(passLength, charArray);
+  console.log(`Generated password: ${password}`);
+  writePassword(password);
 }
 
 // Function for getting a random element from an array
