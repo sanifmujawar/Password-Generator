@@ -157,6 +157,24 @@ function getPassCharOptions() {
   return options;
 }
 
+// Function for creating array based on the password options
+function generateCharArray(options) {
+  let charArray = [];
+  if (options.upper) {
+    charArray = charArray.concat(upperCasedCharacters);
+  }
+  if (options.lower) {
+    charArray = charArray.concat(lowerCasedCharacters);
+  }
+  if (options.numeric) {
+    charArray = charArray.concat(numericCharacters);
+  }
+  if (options.special) {
+    charArray = charArray.concat(specialCharacters);
+  }
+  return charArray;
+}
+
 // Function for getting a random element from an array
 function getRandom(arr) {
 
