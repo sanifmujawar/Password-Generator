@@ -49,6 +49,6 @@ The GitHub repository for this project follows best practices for file structure
 
 ---
 
-© 2023 [Sanif Mujawar]. Confidential and Proprietary. All Rights Reserved.
+© 2023 [Sanif Mujawar](https://github.com/sanifmujawar) Confidential and Proprietary. All Rights Reserved.
 
 🏆 Note: You may add additional sections or details to the README depending on the project's requirements and complexity. 📋
